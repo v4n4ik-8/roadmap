@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Твоя Roadmap в программировании</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h1>🚀Карта прогресса Яси в программировании</h1>
+
+    <div class="progress-wrapper">
+      <div id="progress-bar"></div>
+    </div>
+    <p id="progress-text">0% выполнено</p>
+
+    <ul id="roadmap">
+      <!-- STEP 1 -->
+      <li class="step" data-step="1">
+        <div class="step-header">
+          <label class="checkbox-label">
+            <input type="checkbox" class="step-checkbox" data-step="1" />
+            <span class="step-title">1) Hello, World! — ты уже программист 😉</span>
+          </label>
+          <button class="toggle">▾</button>
+        </div>
+        <div class="step-content">
+          <p>Попробуй выполнить свой первый Python-код прямо здесь:</p>
+
+          <div class="ide">
+            <div class="ide-header">Мини-IDE (Python через Skulpt)</div>
+            <textarea id="code" spellcheck="false">print("Hello, World!")</textarea>
+            <div class="ide-actions">
+              <button id="run">▶ Запустить</button>
+              <button id="reset-code">↺ Сбросить код</button>
+            </div>
+            <pre id="output" class="output" aria-live="polite"></pre>
+          </div>
+        </div>
+      </li>
+
+      <!-- STEP 2 -->
+      <li class="step" data-step="2">
+        <div class="step-header">
+          <label class="checkbox-label">
+            <input type="checkbox" class="step-checkbox" data-step="2" />
+            <span class="step-title">2) Пройти базовый Python-курс</span>
+          </label>
+          <button class="toggle">▾</button>
+        </div>
+        <div class="step-content">
+          <p>Рекомендую начать с курса на Stepik: 
+            <a href="https://stepik.org/course/58852/promo" target="_blank" rel="noopener noreferrer">Поколение Python</a>.
+          </p>
+        </div>
+      </li>
+
+      <!-- STEP 3 -->
+      <li class="step" data-step="3">
+        <div class="step-header">
+          <label class="checkbox-label">
+            <input type="checkbox" class="step-checkbox" data-step="3" />
+            <span class="step-title">3) Мой первый проект (бот, генератор, мини-приложение)</span>
+          </label>
+          <button class="toggle">▾</button>
+        </div>
+        <div class="step-content">
+          <p>Выбери идею по душе и собери что-то небольшое: Telegram-бот, генератор открыток, мини-приложение на Flask и т.д.</p>
+        </div>
+      </li>
+
+      <!-- STEP 4 -->
+      <li class="step" data-step="4">
+        <div class="step-header">
+          <label class="checkbox-label">
+            <input type="checkbox" class="step-checkbox" data-step="4" />
+            <span class="step-title">4) «Грокаем алгоритмы» — без фанатизма</span>
+          </label>
+          <button class="toggle">▾</button>
+        </div>
+        <div class="step-content">
+          <p>Начни читать «Грокаем алгоритмы». Главное — понимать идеи, а не заучивать формулы. Эту книгу я тебе дам</p>
+        </div>
+      </li>
+
+      <!-- STEP 5 -->
+      <li class="step" data-step="5">
+        <div class="step-header">
+          <label class="checkbox-label">
+            <input type="checkbox" class="step-checkbox" data-step="5" />
+            <span class="step-title">5) Мини-сайт или приложение</span>
+          </label>
+          <button class="toggle">▾</button>
+        </div>
+        <div class="step-content">
+          <p>Сделай небольшой продукт целиком: от идеи до развертывания.</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="controls">
+      <button id="reset-progress" class="danger">Очистить прогресс</button>
+    </div>
+
+    <p class="footnote">🎉 Прогресс сохраняется на этом устройстве (LocalStorage)</p>
+  </div>
+
+  <!-- Skulpt (Python in browser) -->
+  <script src="https://unpkg.com/skulpt/dist/skulpt.min.js"></script>
+  <script src="https://unpkg.com/skulpt/dist/skulpt-stdlib.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+:root {
+    --accent: #2a71d0;
+    --bg: #f6f7fb;
+    --white: #fff;
+    --text: #333;
+    --muted: #888;
+    --radius: 14px;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 20px;
+    color: var(--text);
+  }
+  
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+  
+  h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 25px;
+  }
+  
+  .progress-wrapper {
+    width: 100%;
+    height: 10px;
+    background: #e8ecf5;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  
+  #progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--accent);
+    transition: width 0.25s ease;
+  }
+  
+  #progress-text {
+    margin: 8px 0 24px;
+    text-align: center;
+    color: var(--muted);
+  }
+  
+  ul#roadmap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .step {
+    background: #fafbff;
+    border: 1px solid #eef0f6;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  
+  .step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    cursor: pointer;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .step-title {
+    font-weight: 600;
+  }
+  
+  .step-content {
+    padding: 0 20px 16px 20px;
+    display: none;
+  }
+  
+  .step.open .step-content {
+    display: block;
+  }
+  
+  .toggle {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+  
+  .ide {
+    background: #111827;
+    color: #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .ide-header {
+    background: #1f2937;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  textarea#code {
+    width: 100%;
+    height: 160px;
+    background: #111827;
+    color: #d1d5db;
+    border: none;
+    padding: 12px;
+    font-family: Consolas, Monaco, 'Courier New', monospace;
+    font-size: 15px;
+    resize: vertical;
+  }
+  
+  .ide-actions {
+    background: #1f2937;
+    padding: 10px 12px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .ide-actions button {
+    background: var(--accent);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .ide-actions button#reset-code {
+    background: #6b7280;
+  }
+  
+  .output {
+    background: #0f172a;
+    color: #10b981;
+    margin: 0;
+    padding: 12px;
+    min-height: 60px;
+    white-space: pre-wrap;
+  }
+  
+  .controls {
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .controls .danger {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .footnote {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--muted);
+    text-align: center;
+  }
+  
+  a {
+    color: var(--accent);
+  }
